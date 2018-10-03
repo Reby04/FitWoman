@@ -7,8 +7,8 @@ import { RoutinePage } from '../pages/routine/routine';
 import { CreaSchedaPage } from '../pages/crea-scheda/crea-scheda';
 import { AccountPage }from '../pages/account/account';
 //import { InizioPage } from '../pages/inizio/inizio';
-import { TranslateService } from '@ngx-translate/core';
-import { LinguaService } from '../services/lingua.service';
+/*import { TranslateService } from '@ngx-translate/core';
+import { LinguaService } from '../services/lingua.service';*/
 
 
 
@@ -32,13 +32,14 @@ export class MyApp {
   tab3: any;
   tab4: any;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private linguaService: LinguaService, private translate: TranslateService ) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  // constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private linguaService: LinguaService, private translate: TranslateService ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      this.initTranslate();
+      //this.initTranslate();
 
     });
 
@@ -48,8 +49,8 @@ export class MyApp {
     this.tab4 = AccountPage;
 
     
-    
-    initTranslate() {
+
+    /*initTranslate() {
       // Set the default language for translation strings, and the current language.
       let linguaPreferita = this.linguaService.getLinguaPreferita();
       this.translate.setDefaultLang(linguaPreferita);
@@ -61,9 +62,9 @@ export class MyApp {
           this.linguaService.updateLingua(linguaPreferita);
         }
       });
-      
-   
-  }
+
+
+  }*/
   }
 
 
